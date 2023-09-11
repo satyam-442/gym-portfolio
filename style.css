@@ -1,0 +1,341 @@
+/* style.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('gym_trainer_background.jpg'); /* Add a background image for the header */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px; /* Adjust padding to center the content */
+}
+
+/* Customize the navigation bar for an attractive and interactive look */
+
+nav {
+    background-color: #333; /* Background color for the navigation bar */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Increase font size for better visibility */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #ff5722; /* Change color on hover */
+}
+
+/* Add a slide-in effect for the navigation bar */
+nav.slide-in {
+    animation: slide-in 0.5s ease;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background */
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Use the bold (700) variant of the font */
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #fff; /* Set the desired font color */
+}
+
+/* Apply the "Montserrat" font to the <h2> tag */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Use the bold (700) variant of the font */
+    font-size: 28px; /* Adjust the font size as needed */
+    color: #333; /* Set the desired font color */
+    /* Add any additional styling you prefer */
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff7043; /* Change button color on hover */
+}
+
+#about {
+    background-color: #f5f5f5; /* Background color for the "About Me" section */
+    padding: 40px;
+    text-align: center;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bio p {
+    margin-bottom: 20px;
+}
+
+
+/* Style the "Services Provided" section */
+
+#services {
+    background-color: #f9f9f9; /* Background color for the services section */
+    padding: 40px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-around; /* Distribute items evenly with space between them */
+    flex-wrap: wrap; /* Wrap items to the next line if they don't fit */
+}
+
+.service {
+    flex: 1; /* Distribute available space evenly among service boxes */
+    max-width: 300px; /* Limit the maximum width of each service box */
+    margin: 10px; /* Add some margin between service boxes */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Required for the glossy effect */
+    overflow: hidden; /* Hide the gloss initially */
+    transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+}
+
+.service h3 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.service p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.service p:last-child {
+    margin-bottom: 0;
+}
+
+/* Change background color on hover */
+.service:hover {
+    background-color: #ff5722; /* Change to your desired hover color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Add glossy hover effect on service boxes */
+.service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0; /* Start with no gloss */
+    pointer-events: none; /* Prevent the gloss from blocking clicks */
+    z-index: 2; /* Position above the box content */
+    transition: opacity 0.3s ease; /* Transition for the gloss effect */
+}
+
+.service:hover::after {
+    opacity: 1; /* Show the gloss on hover */
+    transition: opacity 0.3s ease; /* Transition for the gloss effect */
+}
+
+/* Add hover effect on service boxes */
+.service:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Style the "Personal Gallery (Photos)" section */
+
+#gallery {
+    background-color: #f9f9f9; /* Background color for the gallery section */
+    padding: 40px;
+    text-align: center;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    grid-gap: 35px; /* Spacing between grid items */
+    justify-content: center; /* Center-align the items horizontally */
+    align-items: center; /* Center-align the items vertically */
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners for the top of the card */
+}
+
+.card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* Add hover effect on cards */
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Style the "Contact Me" section */
+
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 60%;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.contact-form:hover {
+    transform: scale(1.02);
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container textarea:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-form button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff7f49;
+}

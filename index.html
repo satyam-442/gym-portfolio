@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Trainer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Additional styles for the interactive effects */
+        .hero {
+            opacity: 0; /* Initially, set opacity to 0 */
+            animation: fade-in 1.5s ease-in-out forwards; /* Apply fade-in animation */
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px); /* Start slightly above its final position */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero img {
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #ff5722;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff7043;
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+            animation: neon-border 1s infinite alternate;
+        }
+
+        @keyframes neon-border {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 30px rgba(255, 87, 34, 1.2);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="gym_trainer.jpg" alt="Gym Trainer">
+            <h1>Welcome to the World of Fitness</h1>
+            <p>Your Journey to a Healthier You Begins Here</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <!-- Add your About Me content here -->
+        <div class="bio">
+            <p>Hello! I'm Ajay Pandey, and I'm passionate about helping people achieve their fitness goals.</p>
+            <p>My fitness journey started 2012. Over the years, I've gained valuable experience and knowledge in the world of fitness and wellness. I've had the privilege of working with a diverse range of clients, from beginners to advanced athletes.</p>
+            <p>My training style is focused on strength training, HIIT, bulking, and I believe in tailoring workouts to individual needs. I understand that every client is unique, and I'm committed to designing personalized fitness plans that align with your goals and preferences.</p>
+            <p>One of my core values is dedication, consistency. I firmly believe that with dedication and consistent effort, anyone can achieve their desired level of fitness and lead a healthier, happier life. I'm here to support and motivate you throughout your fitness journey.</p>
+            <p>When I'm not at the gym, you can find me in library as I like reading books and blogs on fitness as hobby outside of fitness.</p>
+        </div>
+    </section>    
+
+    <section id="services">
+        <h2>Services Provided</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Personal Training</h3>
+                <p>Get one-on-one personalized training sessions tailored to your fitness goals and needs. Whether you're looking to build strength, lose weight, or improve your overall fitness, I'll create a customized workout plan just for you.</p>
+                <p>Contact me for pricing and availability.</p>
+            </div>
+            <div class="service">
+                <h3>Group Classes</h3>
+                <p>Join our group fitness classes for a fun and motivating workout experience. Classes are suitable for all fitness levels and cover a variety of exercises and fitness styles.</p>
+                <p>Contact me for the current class schedule and pricing.</p>
+            </div>
+            <div class="service">
+                <h3>Nutrition Counseling</h3>
+                <p>Unlock the power of a balanced diet with our nutrition counseling services. Learn how to make healthier food choices, plan meals, and reach your fitness and wellness goals through proper nutrition.</p>
+                <p>Contact me for pricing and to schedule a nutrition consultation.</p>
+            </div>
+        </div>
+    </section>    
+
+            <!-- Client Before and After Photos -->
+            <!-- 
+            <div class="gallery-item">
+                <img src="client_before_after_1.jpg" alt="Client 1 Before and After">
+                <p>Client 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="client_before_after_2.jpg" alt="Client 2 Before and After">
+                <p>Client 2</p>
+            </div> -->
+
+    <section id="gallery">
+        <h2>Personal Gallery</h2>
+        <div class="photo-gallery">
+            <!-- Gallery Item Row 1 -->
+            <div class="gallery-item">
+                <div class="card">
+                    <img src="trainer_in_action_1.jpg" alt="Trainer in Action 1">
+                    <p>Trainer in Action</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="card">
+                    <img src="trainer_in_action_2.jpg" alt="Trainer in Action 2">
+                    <p>Trainer in Action</p>
+                </div>
+            </div>
+    
+            <!-- Gallery Item Row 2 -->
+            <div class="gallery-item">
+                <div class="card">
+                    <img src="fitness_inspiration_1.jpg" alt="Fitness Inspiration 1">
+                    <p>Fitness Inspiration</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="card">
+                    <img src="fitness_inspiration_2.jpg" alt="Fitness Inspiration 2">
+                    <p>Fitness Inspiration</p>
+                </div>
+            </div>
+            
+            <!-- Add more rows as needed -->
+        </div>
+    </section>
+    
+
+    <section id="certification">
+        <h2>Certification</h2>
+        <!-- Add certification details here -->
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <!-- Add achievements and photos here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contact-form" action="#" method="post">
+                    <div class="input-container">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>    
+    
+
+    <footer>
+        <p>&copy; 2023 Gym Trainer</p>
+    </footer>
+</body>
+</html>
